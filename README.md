@@ -5,8 +5,8 @@ three.js
 
 three.js是一个轻巧的3D库。使用默认的WebGL渲染器，还提供了Canvas 2D，SVG和CSS3D渲染器，可以在浏览器运行。
 
-此仓库适用于只想要下载官方离线文档和示例的小伙伴。仅在示例上分了下类改了下默认语言，不会出现官网上改成中文点着又变回来的情况
-
+此仓库适用于只想要下载官方离线文档和示例的小伙伴。仅在示例上分了下类改了下默认语言，不会出现官网上改成中文点击其他链接又变回来的情况;
+如果仅想在线观看文件和示例，我推荐前往[官网入口](https://threejs.org/)
 
 ### 用法 ###
 
@@ -30,5 +30,5 @@ $ node index.js
 
 ### Three.js 相关链接 ###
 
-[three.js](https://github.com/mrdoob/three.js)
-[three.js官网](https://threejs.org/)
+ - [three.js Github地址](https://github.com/mrdoob/three.js)
+ - [three.js 官网](https://threejs.org/)
