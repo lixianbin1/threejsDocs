@@ -10,13 +10,11 @@ three.js是一个轻巧的3D库。使用默认的WebGL渲染器，还提供了Ca
 
 ### 用法 ###
 
-因为 thee.js 的示例中，一下功能(加载模型)需要本地服务器支持。如果有本地服务器，将项目放入，找到docs 目录下的index.html
-打开即可，
-
-如果没有，我编写了一个简单的nodejs 本地服务器。仅需要node支持
+在 thee.js 的示例中，一些功能(加载模型)需要服务器的支持。如果有本地服务器，将项目放入本地服务器，找到docs 目录下的index.html
+打开即可；如果没有本地服务器，那么我编写了一个简单的nodejs脚本。仅需要node支持
 
 ```
-node index.js
+$ node index.js
 
 // 执行后打开浏览器访问即可
 // http://localhost:8080/docs/index.html
