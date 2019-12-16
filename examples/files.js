@@ -2,7 +2,6 @@ var files = {
 	"webgl":[
 	  "",
 	],
-
 	"动画": [
 		"webgl_animation_cloth",
 		"webgl_animation_keyframes",
@@ -83,7 +82,7 @@ var files = {
 		"webgl_interactive_raycasting_points",
 		"webgl_interactive_voxelpainter",
 	],
-	"光探测":[
+	"光线探测器":[
 		"webgl_lightprobe",
 		"webgl_lightprobe_cubecamera",
 	],
@@ -103,7 +102,7 @@ var files = {
 		"webgl_lines_fat_wireframe",
 		"webgl_lines_sphere",
 	],
-	"加载文件":[
+	"加载模型":[
 		"webgl_loader_3ds",
 		"webgl_loader_3mf",
 		"webgl_loader_3mf_materials",
@@ -206,9 +205,10 @@ var files = {
 		"webgl_materials_video_webcam",
 		"webgl_materials_wireframe",
 	],
-	"":[
+	"不知道怎么分":[
 		"webgl_math_orientation_transform",
 		"webgl_mirror",
+		"webgl_nearestneighbour",
 	],
 	"变化":[
 		"webgl_modifier_simplifier",
@@ -227,9 +227,6 @@ var files = {
 		"webgl_multiple_renderers",
 		"webgl_multiple_scenes_comparison",
 		"webgl_multiple_views",
-	],
-	"s":[
-		"webgl_nearestneighbour",
 	],
 	"全景图":[
 		"webgl_panorama_cube",

@@ -65,6 +65,9 @@ function memu(exname){
         case ".woff":case ".woff2":
             return "application/x-font-woff";
             break;
+        case ".webm":
+            return "video/webm";
+            break;
         default:
             return "text/plain";
     }
