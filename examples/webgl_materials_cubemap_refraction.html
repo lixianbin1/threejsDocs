@@ -60,7 +60,7 @@
 				scene = new THREE.Scene();
 				scene.background = textureCube;
 
-				// LIGHTS
+				// 光线
 
 				var ambient = new THREE.AmbientLight( 0xffffff );
 				scene.add( ambient );
@@ -70,13 +70,13 @@
 
 				// light representation
 
-				var sphere = new THREE.SphereBufferGeometry( 100, 16, 8 );
+				var sphere = new THREE.SphereBufferGeometry( 100, 16, 8 ); // 球？
 
 				var mesh = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xffffff } ) );
 				mesh.scale.set( 0.05, 0.05, 0.05 );
 				pointLight.add( mesh );
 
-				// material samples
+				// 材料样品
 
 				var cubeMaterial3 = new THREE.MeshPhongMaterial( { color: 0xccddff, envMap: textureCube, refractionRatio: 0.98, reflectivity: 0.9 } );
 				var cubeMaterial2 = new THREE.MeshPhongMaterial( { color: 0xccfffd, envMap: textureCube, refractionRatio: 0.985 } );
