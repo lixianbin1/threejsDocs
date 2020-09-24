@@ -2,8 +2,11 @@
 
 three.js是一个轻巧的3D库。使用默认的WebGL渲染器，还提供了Canvas 2D，SVG和CSS3D渲染器，可以在浏览器运行。
 
-此仓库适用于只想要下载官方离线文档和示例的小伙伴。仅在示例上分了下类改了下默认语言，不会出现官网上改成中文点击其他链接又变回来的情况;因为three.js 的模型文件需要服务器进行部署，因此本项目不支持在线演示，需克隆到本地进行演示；
-如果仅想在线观看文件和示例，我推荐前往[官网入口](https://threejs.org/)
+此仓库适合想要下载官方离线文档和示例的小伙伴。当然也可以 [在线浏览](https://lixianbin1.github.io/threejsDocs/docs/index.html)仅在示例上分了下类改了下默认语言，不会出现官网上改成中文点击其他链接又变回来的情况;当然也可以前往[官网入口](https://threejs.org/)
+
+<img style="vertical-align: top;" src="https://raw.githubusercontent.com/lixianbin1/threejsDocs/master/lib/2009241.png" alt="预览" >
+
+<img style="vertical-align: top;" src="https://raw.githubusercontent.com/lixianbin1/threejsDocs/master/lib/2009242.png" alt="预览" >
 
 ## 用法
 
@@ -19,7 +22,7 @@ $ node index.js
 
 ## 计划
 
-汉化未汉化的菜单；这是一个不着急的工作
+汉化b部分未汉化的菜单；在官网中，部分菜单并未汉化，可能是考虑到汉化与原意有差别。但我还是希望能看到菜单有进行了汉化。如果对原意有歧义，可以切换到英文版进行查看。
 
 ```
 ### 如何编辑文档的菜单翻译
@@ -58,7 +61,7 @@ $ node index.js
 
 ### 1：官网访问太慢了
 
-因为THREE.JS 的3d素材都很大，导致加载过慢，访问起来会很卡顿，不如下载到本地访问，访问可以更加快速，便捷
+因为THREE.JS 的3d素材都很大，导致加载过慢，访问起来会很卡顿，而且国内对部分网站的不友好，所以不如下载到本地访问，访问可以更加快速，便捷
 
 ### 2：官网的中文链接没做好
 
