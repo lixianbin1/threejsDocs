@@ -5,6 +5,8 @@ three.js是一个轻巧的3D库。使用默认的WebGL渲染器，还提供了Ca
 此仓库适合想要下载官方离线文档和示例的小伙伴。当然也可以 [在线浏览](https://lixianbin1.github.io/threejsDocs/docs/index.html)目前仅在示例上分了下类改了下默认语言，不会出现官网上改成中文点击其他链接又变回来的情况;
 当然也可以前往[官网入口](https://threejs.org/)
 
+在线观看 https://lixianbin1.github.io/threejsDocs/docs/index.html#manual/zh/introduction/Creating-a-scene
+
 <img style="vertical-align: top;" src="https://github.com/lixianbin1/threejsDocs/blob/master/build/2009241.png" alt="预览" >
 
 <img style="vertical-align: top;" src="https://github.com/lixianbin1/threejsDocs/blob/master/build/2009242.png" alt="预览" >
