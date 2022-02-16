@@ -53,8 +53,8 @@ $ node index.js
 
 ### 仓库的更新时间
 
-于 2019-12-13日拉取 three.js 的 dev 分支最新 commit 。
-于 2022-02-16日拉取 three.js 的 dev 分支更新文档。
+ - 于 2019-12-13日拉取 three.js 的 dev 分支最新 commit 。
+ - 于 2022-02-16日拉取 three.js 的 dev 分支更新文档。
 
 ## Three.js 相关链接
 
