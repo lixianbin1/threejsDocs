@@ -1,27 +1,24 @@
-/**
- * @author mrdoob / http://mrdoob.com
- * @author Mugen87 / https://github.com/Mugen87
- */
+class VRButton {
 
-var VRButton = {
+	static createButton( renderer, options ) {
 
-	createButton: function ( renderer, options ) {
+		if ( options ) {
 
-		if ( options && options.referenceSpaceType ) {
-
-			renderer.xr.setReferenceSpaceType( options.referenceSpaceType );
+			console.error( 'THREE.VRButton: The "options" parameter has been removed. Please set the reference space type via renderer.xr.setReferenceSpaceType() instead.' );
 
 		}
 
+		const button = document.createElement( 'button' );
+
 		function showEnterVR( /*device*/ ) {
 
-			var currentSession = null;
+			let currentSession = null;
 
-			function onSessionStarted( session ) {
+			async function onSessionStarted( session ) {
 
 				session.addEventListener( 'end', onSessionEnded );
 
-				renderer.xr.setSession( session );
+				await renderer.xr.setSession( session );
 				button.textContent = 'EXIT VR';
 
 				currentSession = session;
@@ -32,7 +29,6 @@ var VRButton = {
 
 				currentSession.removeEventListener( 'end', onSessionEnded );
 
-				renderer.xr.setSession( null );
 				button.textContent = 'ENTER VR';
 
 				currentSession = null;
@@ -72,7 +68,7 @@ var VRButton = {
 					// ('local' is always available for immersive sessions and doesn't need to
 					// be requested separately.)
 
-					var sessionInit = { optionalFeatures: [ 'local-floor', 'bounded-floor' ] };
+					const sessionInit = { optionalFeatures: [ 'local-floor', 'bounded-floor', 'hand-tracking', 'layers' ] };
 					navigator.xr.requestSession( 'immersive-vr', sessionInit ).then( onSessionStarted );
 
 				} else {
@@ -108,6 +104,16 @@ var VRButton = {
 
 		}
 
+		function showVRNotAllowed( exception ) {
+
+			disableButton();
+
+			console.warn( 'Exception when trying to call xr.isSessionSupported', exception );
+
+			button.textContent = 'VR NOT ALLOWED';
+
+		}
+
 		function stylizeElement( element ) {
 
 			element.style.position = 'absolute';
@@ -127,7 +133,7 @@ var VRButton = {
 
 		if ( 'xr' in navigator ) {
 
-			var button = document.createElement( 'button' );
+			button.id = 'VRButton';
 			button.style.display = 'none';
 
 			stylizeElement( button );
@@ -136,21 +142,28 @@ var VRButton = {
 
 				supported ? showEnterVR() : showWebXRNotFound();
 
-			} );
+				if ( supported && VRButton.xrSessionIsGranted ) {
+
+					button.click();
+
+				}
+
+			} ).catch( showVRNotAllowed );
 
 			return button;
 
 		} else {
 
-			var message = document.createElement( 'a' );
-			message.href = 'https://immersiveweb.dev/';
+			const message = document.createElement( 'a' );
 
 			if ( window.isSecureContext === false ) {
 
+				message.href = document.location.href.replace( /^http:/, 'https:' );
 				message.innerHTML = 'WEBXR NEEDS HTTPS'; // TODO Improve message
 
 			} else {
 
+				message.href = 'https://immersiveweb.dev/';
 				message.innerHTML = 'WEBXR NOT AVAILABLE';
 
 			}
@@ -167,6 +180,24 @@ var VRButton = {
 
 	}
 
-};
+	static xrSessionIsGranted = false;
+
+	static registerSessionGrantedListener() {
+
+		if ( 'xr' in navigator ) {
+
+			navigator.xr.addEventListener( 'sessiongranted', () => {
+
+				VRButton.xrSessionIsGranted = true;
+
+			} );
+
+		}
+
+	}
+
+}
+
+VRButton.registerSessionGrantedListener();
 
 export { VRButton };
